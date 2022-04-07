@@ -6,7 +6,6 @@ export type ErrorModel =  {
 	time:string,
 	type: Type,
 	'user-id'?: string,	
-	
 }
 
 enum Type {

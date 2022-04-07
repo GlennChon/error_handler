@@ -1,5 +1,23 @@
 # error_handler
+Takes:
+    ErrorModel =  {
+        'error-code':number,
+        'function-name':string,
+        message:string | undefined,
+        'stack-trace':string | undefined,
+        time:string,
+        type: Type,
+        'user-id'?: string,	
+    }
 
+Type enum:
+    Type {
+        error = 'error',
+        warning = 'warning',
+        info = 'info',
+        success = 'success',
+    }
+    
 ## Description:
 Logs errors to Firestore 'errors' collection.
 
@@ -11,6 +29,9 @@ Logs errors to Firestore 'errors' collection.
 
 ## Setup Instructions:
 - Create repo on github
+    - Push to main
     - Create branch: gcp_deploy
+    - Merge main into gcp_deploy
 - Create cloud function via cloud trigger
     - Link previously created repo
+    - Link Service Account: production-service-account
