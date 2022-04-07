@@ -3,7 +3,8 @@ import 'dotenv/config'
 import { Request, Response } from 'express'
 import { ErrorModel } from '@/types'
 import { initializeApp } from 'firebase-admin/app'
-import { getFirestore } from 'firebase-admin/firestore'
+import {  getFirestore } from 'firebase-admin/firestore'
+import { firebaseConfig } from './firebase.config'
 /**
  * Responds to any HTTP request.
  * @param {!express:Request} req HTTP request context.
@@ -32,9 +33,9 @@ export const errorHandler = async (
 	try {	
 		const error = req.body
 		// Initialize Firebase
-		initializeApp();
+		const app = initializeApp(firebaseConfig);
 		// Initialize Cloud Firestore and get a reference to the service
-		const db = getFirestore();
+		const db = getFirestore(app);
 		// Add error to database
 		const docRef = await db.collection('errors').add(error)
 		// Return success response with docRef id
