@@ -32,6 +32,7 @@ Logs errors to Firestore 'errors' collection.
     - Push to main
     - Create branch: gcp_deploy
     - Merge main into gcp_deploy
-- Create cloud function via cloud trigger
+- Create cloud trigger
     - Link previously created repo
-    - Link Service Account: production-service-account
+    - Push to repo to trigger build
+- In Cloud Function
