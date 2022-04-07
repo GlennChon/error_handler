@@ -32,7 +32,7 @@
 	"author": "Glenn Chon",
 	"license": "UNLICENSED",
 	"devDependencies": {
-		"@google-cloud/functions-framework": "^2.1.0",
+		"@google-cloud/functions-framework": "^3.1.0",
 		"@types/express": "^4.17.13",
 		"@types/node": "^15.14.9",
 		"@types/node-fetch": "^2.5.12",
