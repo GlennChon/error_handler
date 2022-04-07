@@ -45,7 +45,6 @@ Type {
 
 - Built via GCP Cloud Build trigger: errorHandlerTrigger
 - Function Name: errorHandler
-- Trigger Url: https://us-central1-job-search-310119.cloudfunctions.net/errorHandler
 
 ## License
 
